@@ -1,0 +1,30 @@
+
+
+<form action="/users/create" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<p>
+		<label>Name:</label>
+    <input type="text" name="user[name]">
+	</p>
+  <p>
+    <label>Dojo Location:</label>
+    <select name="user[location]">
+      <option value="San Jose">San Jose</option>
+      <option value="Seattle">Seattle</option>
+      <option value="Dallas">Dallas</option>
+    </select>
+  </p>
+  <p>
+    <label>Favorite Language:</label>
+    <select name="user[language]">
+      <option value="JavaScript">JavaScript</option>
+      <option value="Python">Python</option>
+      <option value="RubyOnRails">Ruby On Rails</option>
+    </select>
+  </p>
+  <label>Comment (optional):</label>
+  <p>
+  <textarea name="user[comment]" rows="8" cols="40"></textarea><br>
+	<input type="submit" value="Submit">
+</p>
+</form>
